@@ -1,16 +1,14 @@
 
-# TypeScript Function Examples
+# Updated TypeScript Function Examples with Arrow Functions
 
-This repository demonstrates basic TypeScript functions returning different data types. It includes examples for returning `string`, `number`, `array`, `object`, `boolean`, `void`, `tuple`, `Promise`, and `enum`. Each function is simple and returns the appropriate type.
+This repository demonstrates basic TypeScript functions using **arrow functions** and `const`. Each function returns different data types like `string`, `number`, `array`, `object`, `boolean`, `void`, `tuple`, `Promise`, and `enum`.
 
 ## 1. Return Type: `string`
 
 This function returns a greeting message with the given name.
 
 ```typescript
-function greet(name: string): string {
-    return `Hello, ${name}!`;
-}
+const greet = (name: string): string => `Hello, ${name}!`;
 
 // Test
 const greeting: string = greet("John");
@@ -30,9 +28,7 @@ Hello, John!
 This function returns the square of a number.
 
 ```typescript
-function square(num: number): number {
-    return num * num;
-}
+const square = (num: number): number => num * num;
 
 // Test
 const result: number = square(5);
@@ -52,9 +48,7 @@ Square of 5 is: 25
 This function returns an array of numbers.
 
 ```typescript
-function getNumbers(): number[] {
-    return [1, 2, 3, 4, 5];
-}
+const getNumbers = (): number[] => [1, 2, 3, 4, 5];
 
 // Test
 const numbers: number[] = getNumbers();
@@ -79,9 +73,7 @@ interface Person {
     age: number;
 }
 
-function getPerson(): Person {
-    return { name: "Alice", age: 25 };
-}
+const getPerson = (): Person => ({ name: "Alice", age: 25 });
 
 // Test
 const person: Person = getPerson();
@@ -101,10 +93,10 @@ Person details: { name: 'Alice', age: 25 }
 This function checks if a word is a palindrome.
 
 ```typescript
-function isPalindrome(word: string): boolean {
+const isPalindrome = (word: string): boolean => {
     const reversed = word.split('').reverse().join('');
     return word === reversed;
-}
+};
 
 // Test
 const word: string = "madam";
@@ -122,10 +114,10 @@ Is "madam" a palindrome? true
 
 ## 6. Return Type: `void`
 
-This function doesn't return anything, it just prints a message.
+This function doesn't return anything; it just prints a message.
 
 ```typescript
-function printMessage(): void {
+const printMessage = (): void => {
     console.log("This is a simple message.");
 }
 
@@ -145,9 +137,7 @@ This is a simple message.
 This function returns a tuple containing a `string` and a `number`.
 
 ```typescript
-function getUserData(): [string, number] {
-    return ["John", 30];
-}
+const getUserData = (): [string, number] => ["John", 30];
 
 // Test
 const userData: [string, number] = getUserData();
@@ -167,13 +157,13 @@ User data: [ 'John', 30 ]
 This function simulates fetching data asynchronously and returns a `Promise<number>`.
 
 ```typescript
-function fetchData(): Promise<number> {
+const fetchData = (): Promise<number> => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(42); // Simulated data
         }, 1000);
     });
-}
+};
 
 // Test
 fetchData().then((data: number) => {
@@ -199,9 +189,7 @@ enum Status {
     INTERNAL_ERROR = 500
 }
 
-function getStatus(): Status {
-    return Status.SUCCESS;
-}
+const getStatus = (): Status => Status.SUCCESS;
 
 // Test
 const statusCode: Status = getStatus();
@@ -243,6 +231,6 @@ Status code: 200
 
 ## Conclusion
 
-These simple examples cover various return types in TypeScript and can be easily tested. Each function is designed to demonstrate a basic return type, ranging from primitive types like `string` and `number` to more complex types like `Promise` and `enum`.
+These examples now use arrow functions and `const` instead of regular function declarations. They cover various return types in TypeScript and can be easily tested. Arrow functions provide a more concise syntax and are a modern best practice in JavaScript/TypeScript.
 
 Feel free to modify and expand upon these examples!

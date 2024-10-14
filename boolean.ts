@@ -1,8 +1,8 @@
 // Function to check if a string is a palindrome
-function isPalindrome(word: string): boolean {
+const isPalindrome = (word: string): boolean => {
     const reversed = word.split('').reverse().join('');
     return word === reversed;
-}
+};
 
 // Test the function
 const word: string = "madam";

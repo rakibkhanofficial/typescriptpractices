@@ -5,12 +5,10 @@ enum Status {
     INTERNAL_ERROR = 500
 }
 
-// Function to return a status code
-function getStatus(): Status {
-    return Status.SUCCESS;
-}
+const getStatus = (): Status => Status.SUCCESS;
 
-// Test the function
+// Test
 const statusCode: Status = getStatus();
 
-console.log(`Status code:`, statusCode); // Output: Status code: 200
+console.log(`Status code:`, statusCode);
+ // Output: Status code: 200

@@ -1,7 +1,5 @@
 // Function to return the square of a number
-function square(num: number): number {
-    return num * num;
-}
+const square = (num: number): number => num * num;
 
 // Test the function
 const result: number = square(5);

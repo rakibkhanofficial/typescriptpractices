@@ -5,9 +5,7 @@ interface Person {
 }
 
 // Function to return a person object
-function getPerson(): Person {
-    return { name: "Alice", age: 25 };
-}
+const getPerson = (): Person => ({ name: "Alice", age: 25 });
 
 // Test the function
 const person: Person = getPerson();

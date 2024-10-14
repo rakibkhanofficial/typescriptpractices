@@ -1,7 +1,5 @@
 // Function to return a greeting message
-function greet(name: string): string {
-    return `Hello, ${name}!`;
-}
+const greet = (name: string): string => `Hello, ${name}!`;
 
 // Test the function
 const greeting: string = greet("John");
